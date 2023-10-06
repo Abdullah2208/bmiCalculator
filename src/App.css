@@ -9,12 +9,50 @@ body {
 .main-card {
     background-color: whitesmoke;
     margin: 3em 10% 0 10%;
-    height: 80vh;
+    border-radius: 10px;
 }
-h1 {
+h1,h2 {
     text-align: center;
     padding-top: 2rem;
     color: #440044;
     text-decoration: underline;
     font-style: italic;
+}
+
+h2 {
+    text-decoration: none ;
+    font-style: normal;
+}
+.height-buttons-div {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+
+}
+@media  ( max-width: 700px){
+    .height-buttons-div{
+        border: 1px solid #440044;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        padding: 2em 0;
+    }
+    
+}
+button {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: #440044;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+input {
+    display: block;
+    padding: 0.7rem 3rem 0.7rem 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #440044;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 1.1em;
 }
