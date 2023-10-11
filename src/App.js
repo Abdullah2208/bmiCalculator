@@ -1,15 +1,39 @@
 import './App.css';
+
+import React, { useState} from 'react';
+
 import HeightSelector from './components/Height-selector';
-import MetricHeading from './components/Metric-height';
+import MetricHeight from './components/Metric-height';
+import WeightSelector from './components/Weight-selector';
+import ImperialHeight from './components/Imperial-height';
+import MetricWeight from './components/Metric-weight';
+import ImperialWeight from './components/Imperial-weight';
+
+
+export const heightContext = React.createContext();
+export const weightContext = React.createContext();
 
 function App () {
+
+  const [activeHeightButton, setActiveHeightButton ] = useState('metric');
+  const [activeWeightButton, setActiveWeightButton ] = useState('metric'); 
+
   return (
     <div className='main-card'>
-      <h1>BMI Calculator</h1>
-      <h2>Height</h2>
-      <HeightSelector />
-      <MetricHeading />
-      <h2>Weight</h2>
+    <heightContext.Provider value={{activeHeightButton, setActiveHeightButton}}>
+        <h1>BMI Calculator</h1>
+        <h2>Height</h2>
+        <HeightSelector />
+        
+        {activeHeightButton === 'metric' ? <MetricHeight /> : <ImperialHeight />}
+
+    </heightContext.Provider>
+    <weightContext.Provider value={{activeWeightButton, setActiveWeightButton}}>
+        <h2>Weight</h2>
+        <WeightSelector />
+        {activeWeightButton === 'metric' ? <MetricWeight /> : <ImperialWeight />}
+
+    </weightContext.Provider>
     </div>
   )
 }
