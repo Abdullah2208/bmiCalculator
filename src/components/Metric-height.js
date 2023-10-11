@@ -1,6 +1,6 @@
 import '../App.css'
 
-function MetricHeading() {
+function MetricHeight() {
     return(
             <input 
                 type='text'
@@ -11,4 +11,4 @@ function MetricHeading() {
     )
 }
 
-export default MetricHeading;
+export default MetricHeight;
