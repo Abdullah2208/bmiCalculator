@@ -5,7 +5,7 @@ function MetricHeight() {
             <input 
                 type='text'
                 inputMode="numeric"
-                placeHolder="Height in cm"
+                placeHolder="Centimeters"
                 id="metric-input"            
             />
     )

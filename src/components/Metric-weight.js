@@ -5,7 +5,7 @@ function MetricWeight() {
         <input 
         type='text'
         inputMode="numeric"
-        placeHolder="Weight in kg"
+        placeHolder="Kilograms"
         id="metric-input"            
     />
     )

@@ -5,7 +5,7 @@ function ImperialWeight() {
         <input 
         type='text'
         inputMode="numeric"
-        placeHolder="Weight in lbs"
+        placeHolder="Pounds"
         id="imperial-weight-input"            
     />
     )

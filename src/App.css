@@ -30,15 +30,6 @@ h2 {
     flex-wrap: wrap;
 
 }
-@media  ( max-width: 700px){
-    .height-buttons-div{
-        border: 1px solid #440044;
-        margin-left: 3rem;
-        margin-right: 3rem;
-        padding: 2em 0;
-    }
-    
-}
 button {
     display: block;
     padding: 1rem 2rem;
@@ -56,9 +47,55 @@ input {
     margin-top: 2rem;
     font-size: 1.1em;
     outline: none;
-    transition: outline 0.1s ease-in-out;
+    transition: outline 110ms ease-in-out;
 }
 
 input:focus {
     outline: 2px solid #440044;
+}
+.imperial-input-div input {
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.imperial-input-div {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap
+}
+.output {
+    background-color: #ededed;
+    width: 60%;
+    height: 5em;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 2em;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.output p {
+    display: block;
+    font-size: 2em;
+}
+.result-button {
+    margin: 0 auto;
+    padding: 1.5em 4em;
+    border: 1px solid #440044;
+    transition: all 80ms linear;
+}
+.result-button:active {
+    background-color: white;
+    color: #440044;
+}
+@media  ( max-width: 700px){
+    .height-buttons-div{
+        border: 1px solid #440044;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        padding: 2em 0;
+    }
 }
