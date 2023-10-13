@@ -16,8 +16,8 @@ function WeightSelector () {
 
     return (
         <div className="height-buttons-div">
-            <button onClick={metricChange}>Metric</button>
-            <button onClick={imperialChange}>Imperial</button>
+            <button onClick={metricChange} className={activeWeightButton === 'metric'? 'toggled' : ''}>Metric</button>
+            <button onClick={imperialChange} className={activeWeightButton === 'imperial'? 'toggled' : ''}>Imperial</button>
         </div>
     )
 }

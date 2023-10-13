@@ -8,7 +8,8 @@ function HeightSelector () {
 const {activeHeightButton, setActiveHeightButton} = useContext(heightContext);
 
 const metricChange = () => {
-    setActiveHeightButton('metric')
+    setActiveHeightButton('metric');
+
 }
 const imperialChange = () => {
     setActiveHeightButton('imperial')
@@ -16,8 +17,8 @@ const imperialChange = () => {
 
     return (
         <div className="height-buttons-div">
-            <button onClick={metricChange}>Metric</button>
-            <button onClick={imperialChange}>Imperial</button>
+            <button onClick={metricChange} className={activeHeightButton === 'metric'? 'toggled' : ''}>Metric</button>
+            <button onClick={imperialChange} className={activeHeightButton === 'imperial'? 'toggled': ''}>Imperial</button>
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import '../App.css';
 
-function Output() {
+function Output(props) {
+    
     return (
         <div className="output">
-            <p>20</p>
+            <p>{props.value}</p>
         </div>
     )
 }
